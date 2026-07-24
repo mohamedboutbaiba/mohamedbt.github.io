@@ -62,6 +62,21 @@ a.button:hover {
   </style>
 </head>
 <body>
+ <script>
+function actualizarReloj() {
+  const ahora = new Date();
+  
+  // الوقت ديال إسبانيا Valencia
+  const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timeZone: 'Europe/Madrid' };
+  const opcionesHora = { hour: '2-digit', minute: '2-digit', second: '2-digit', timeZone: 'Europe/Madrid' };
+  
+  document.getElementById('fecha').textContent = ahora.toLocaleDateString('es-ES', opcionesFecha);
+  document.getElementById('hora').textContent = ahora.toLocaleTimeString('es-ES', opcionesHora);
+}
+
+actualizarReloj(); // تشغيل أول مرة
+setInterval(actualizarReloj, 1000); // كتتحدث كل ثانية
+</script>
  <!-- الأعلام -->
 <div style="text-align: left; padding: 10px 30px 0 30px; max-width: 900px; margin: auto;">
   <img src="https://flagcdn.com/w80/es.png" alt="Bandera España" style="height: 40px; margin-right: 10px; border-radius: 5px;">
