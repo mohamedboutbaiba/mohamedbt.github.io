@@ -363,7 +363,16 @@ actualizarReloj(); // تشغيل أول مرة
 setInterval(actualizarReloj, 1000); // كتتحدث كل ثانية
 </script>
 </body>
-</html>   
+</html>
+<button onclick="document.body.classList.toggle('dark')" 
+  style="position:fixed; top:20px; right:20px; background:#0077b6; color:white; border:none; padding:10px 15px; border-radius:50px; cursor:pointer; z-index:999;">
+  🌙
+</button>
+
+<style>
+.dark { background:#121212; color:white; }
+.dark section { background:#1e1e1e !important; }
+</style>
 </body> <!-- خليه هو الآخر -->
 </html>
 </body>
