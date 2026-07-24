@@ -373,6 +373,15 @@ setInterval(actualizarReloj, 1000); // كتتحدث كل ثانية
 .dark { background:#121212; color:white; }
 .dark section { background:#1e1e1e !important; }
 </style>
+<div style="text-align:center; margin:20px;">
+  <p>👥 Visitantes: <span id="visitas">0</span></p>
+</div>
+<script>
+let visitas = localStorage.getItem('visitas') || 0;
+visitas++;
+localStorage.setItem('visitas', visitas);
+document.getElementById('visitas').innerText = visitas;
+</script>
 </body> <!-- خليه هو الآخر -->
 </html>
 </body>
