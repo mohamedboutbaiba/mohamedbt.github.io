@@ -170,6 +170,29 @@ setInterval(actualizarReloj, 1000); // كتتحدث كل ثانية
     <span style="background:#0077b6; color:white; padding:10px 20px; border-radius:20px;">Formateo y Backup</span>
   </div>
 </section>
+	<section style="max-width:700px; margin:40px auto; text-align:center; background:#f0f8ff; padding:30px; border-radius:15px;">
+  <h2 style="color:#0077b6;">¿Qué le pasa a tu PC?</h2>
+  <select id="problema" style="padding:10px; width:80%; border-radius:8px; border:1px solid #ccc; margin:15px 0;">
+    <option>Elige tu problema...</option>
+    <option>Va muy lento</option>
+    <option>No enciende</option>
+    <option>Tiene virus</option>
+    <option>Se calienta mucho</option>
+  </select>
+  <p id="respuesta" style="font-weight:bold; color:#0077b6; margin-top:15px;"></p>
+</section>
+
+<script>
+document.getElementById('problema').onchange = function(){
+  let res = {
+    "Va muy lento": "Necesita limpieza y optimización. Tiempo: 1h",
+    "No enciende": "Puede ser fuente o disco. Hay que revisarlo.",
+    "Tiene virus": "Antivirus + formateo. Tus datos seguros.",
+    "Se calienta mucho": "Limpieza de ventiladores y pasta térmica."
+  };
+  document.getElementById('respuesta').innerText = res[this.value] || "";
+}
+</script>
 <h2>المقالات ديالي</h2>
 <ul>
   <li><a href="cv-espana.html">preparar cv espagnol</a></li>
